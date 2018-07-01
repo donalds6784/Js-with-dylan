@@ -68,14 +68,54 @@ example2.push(11, 35, 'Donalds');
 
 console.log(example1);
 console.log(example2);
+
 */
-
+//=================================================================================
 // OR WE CAN USE A .map() METHOD TO MAP PUSH AND RETURN THE NEW ARRAY FOR EXAMPLE2
+//=================================================================================
 
+/*
 example2 = example1.map((element) => {
     return element;
 });
 example2.push(11, 25, 'Coding');
 console.log(example1);
 console.log(example2);
+
+*/
+//==============================================
+// LEARN OBJECTS
+//==============================================
+
+let person = {
+    firstName: 'Dylan',
+    secondName: 'Donalds',
+    address: {
+        city: 'austria',
+        state: 'Cansas'
+    },
+    age: 30,
+    friendsList: ['miles', 'Donalds', 'Brandy']   
+};
+
+console.log(person.address);
+console.log(person['address']);
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(person.hasOwnProperty('firstName'));
+
+//==============================================
+// Referencing objects
+//==============================================
+
+let name = {
+    firstName: 'Brighton'
+};
+
+// let name2 = name;// We asign name to name2 by reference
+let name2 = Object.assign({}, name); // Using this method, we can avoid ojects from being assigned by reference.
+name2.lastName = 'Smorge'; // We assign smorge to lastName property
+
+console.log(name);
+console.log(name2);
 
